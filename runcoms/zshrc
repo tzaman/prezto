@@ -11,3 +11,19 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Set dir colors
+if [[ -s "$HOME/.dir_colors/dircolors" ]]; then
+  source "$HOME/.dir_colors/dircolors"
+fi
+
+# Aliases
+
+alias gcam='git commit -a -m'
+alias gst='git status'
+alias gsti='git status --ignored'
+
+# Turn off some module settings
+
+unalias rm
+unsetopt CDABLEVARS
